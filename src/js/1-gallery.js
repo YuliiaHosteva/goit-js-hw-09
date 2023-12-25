@@ -1,10 +1,12 @@
+'use strict';
+
 import 'simplelightbox/dist/simple-lightbox.min.css';
 import SimpleLightbox from 'simplelightbox';
 
 
 const iconLeft = new URL('../img/icons-left.svg#icon-left', import.meta.url).href; 
 const iconRight = new URL('../img/icons-right.svg#icon-right', import.meta.url).href; 
-
+``
 const images = [
   {
     preview:
