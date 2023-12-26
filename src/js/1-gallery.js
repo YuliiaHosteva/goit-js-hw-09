@@ -1,12 +1,11 @@
 'use strict';
 
-import 'simplelightbox/dist/simple-lightbox.min.css';
-import SimpleLightbox from 'simplelightbox';
+// Описаний в документації
+import SimpleLightbox from "simplelightbox";
+// Додатковий імпорт стилів
+import "simplelightbox/dist/simple-lightbox.min.css";
 
 
-const iconLeft = new URL('../img/icons-left.svg#icon-left', import.meta.url).href; 
-const iconRight = new URL('../img/icons-right.svg#icon-right', import.meta.url).href; 
-``
 const images = [
   {
     preview:
@@ -91,11 +90,8 @@ const galleryMarkup = images.map(({ preview, original, description }) => {
 
 gallery.insertAdjacentHTML('beforeend', galleryMarkup);
 
-new SimpleLightbox('.gallery a', {
-   navText: [ 
-    `<svg width="24" height="24"><use href="${iconLeft}"></svg>`, 
-    `<svg width="24" height="24"><use href="${iconRight}"></svg>` 
-  ], 
+const lightbox = new SimpleLightbox('.gallery a', {
   captionsData: "alt",
   captionDelay: 250,
 });
+
